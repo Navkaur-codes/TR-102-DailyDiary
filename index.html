@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Diary Report</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-nav" class="main-nav">
+    <div class="nav-container">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <a href="#" onclick="showSection('home')">Training Report</a>
+        </div>
+        <div class="nav-links">
+          <a href="#" onclick="showSection('home')" data-section="home" class="nav-link active">Home</a>
+          <a href="#" onclick="showSection('diary')" data-section="diary" class="nav-link">📖 Daily Diary</a>
+          <a href="#" onclick="showSection('projects')" data-section="projects" class="nav-link">💻 Projects</a>
+          <a href="#" onclick="showSection('certificates')" data-section="certificates" class="nav-link">📜 Certificates</a>
+          <a href="#" onclick="showSection('report')" data-section="report" class="nav-link">🗂 Report</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    <!-- FRONT PAGE -->
+    <section class="section active" id="home">
+      <div class="home-container">
+        <div class="intro-card">
+          <h1 class="intro-h1">Training TR-102</h1>
+          <h3 class="intro-h3">by <span class="intro-name">Navpreet Kaur</span></h3>
+          <p class="intro-p">B.Tech (CSE) | Guru Nanak Dev Engineering College</p>
+          <p class="training-title">4 Weeks Training at <br> Sensation Software Solutions, Mohali</p>
+          <div class="home-buttons">
+            <button onclick="showSection('diary')" class="home-btn">📖 Daily Diary</button>
+            <button onclick="showSection('projects')" class="home-btn">💻 Projects</button>
+            <button onclick="showSection('certificates')" class="home-btn">📜 Certificates</button>
+            <button onclick="showSection('report')" class="home-btn">🗂 Report</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAILY DIARY PAGE -->
+<section id="diary" class="section">
+  <div class="page-container">
+      <header class="page-header">
+          <h2 class="page-title">Daily Diary - 4 Weeks</h2>
+      </header>
+
+      <div class="content-card">
+          <nav class="week-nav">
+              <button data-week="week1" class="week-tab active">Week 1</button>
+              <button data-week="week2" class="week-tab">Week 2</button>
+              <button data-week="week3" class="week-tab">Week 3</button>
+              <button data-week="week4" class="week-tab">Week 4</button>
+          </nav>
+
+          <div class="content-area">
+              <section id="week1" class="week active">
+                <h3 class="week-h3">Week 1: Introduction & Orientation</h3>
+                <p class="week-p">Focused on understanding project objectives, setup, and documentation structure.</p>
+                <div class="day-links">
+                  <a href="#" data-pdf="01_Day1.pdf" class="day-link">Day 1</a>
+                  <a href="#" data-pdf="02_Day2.pdf" class="day-link">Day 2</a>
+                  <a href="#" data-pdf="03_Day3.pdf" class="day-link">Day 3</a>
+                  <a href="#" data-pdf="04_Day4.pdf" class="day-link">Day 4</a>
+                  <a href="#" data-pdf="05_Day5.pdf" class="day-link">Day 5</a>
+                </div>
+              </section>
+
+              <section id="week2" class="week">
+                <h3 class="week-h3">Week 2: Development & Collaboration</h3>
+                <p class="week-p">Worked on project features and GitHub integration, explored collaborative workflow.</p>
+                <div class="day-links">
+                  <a href="#" data-pdf="06_Day6.pdf" class="day-link">Day 6</a>
+                  <a href="#" data-pdf="07_Day7.pdf" class="day-link">Day 7</a>
+                  <a href="#" data-pdf="08_Day8.pdf" class="day-link">Day 8</a>
+                  <a href="#" data-pdf="09_Day9.pdf" class="day-link">Day 9</a>
+                  <a href="#" data-pdf="10_Day10.pdf" class="day-link">Day 10</a>
+                </div>
+              </section>
+
+              <section id="week3" class="week">
+                <h3 class="week-h3">Week 3: Testing & Refinement</h3>
+                <p class="week-p">Performed testing, fixed bugs, and improved code quality for better performance.</p>
+                <div class="day-links">
+                  <a href="#" data-pdf="11_Day11.pdf" class="day-link">Day 11</a>
+                  <a href="#" data-pdf="12_Day12.pdf" class="day-link">Day 12</a>
+                  <a href="#" data-pdf="13_Day13.pdf" class="day-link">Day 13</a>
+                  <a href="#" data-pdf="14_Day14.pdf" class="day-link">Day 14</a>
+                  <a href="#" data-pdf="15_Day15.pdf" class="day-link">Day 15</a>
+                </div>
+              </section>
+
+              <section id="week4" class="week">
+                <h3 class="week-h3">Week 4: Finalization & Presentation</h3>
+                <p class="week-p">Compiled all work, prepared the final report, and reflected on learning outcomes.</p>
+                <div class="day-links">
+                  <a href="#" data-pdf="16_Day16.pdf" class="day-link">Day 16</a>
+                  <a href="#" data-pdf="17_Day17.pdf" class="day-link">Day 17</a>
+                  <a href="#" data-pdf="18_Day18.pdf" class="day-link">Day 18</a>
+                  <a href="#" data-pdf="19_Day19.pdf" class="day-link">Day 19</a>
+                  <a href="#" data-pdf="20_Day20.pdf" class="day-link">Day 20</a>
+                </div>
+              </section>
+          </div>
+
+          <!-- Single PDF Viewer -->
+          <!-- Single PDF Viewer -->
+<div class="pdf-viewer-container">
+  <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+</div>
+
+      </div>
+  </div>
+</section>
+
+
+    <!-- GENERIC SECTION LAYOUT -->
+    <div id="generic-sections">
+        <section id="projects" class="section section-content">
+            <div class="page-container">
+                <header class="page-header"><h2 class="page-title">Projects</h2></header>
+                <div class="content-card"><p>Add links and summaries of your completed projects here.</p></div>
+            </div>
+        </section>
+        <section id="certificates" class="section section-content">
+             <div class="page-container">
+                <header class="page-header"><h2 class="page-title">Certificates</h2></header>
+                <div class="content-card"><p>List your certificates or attach links/images here.</p></div>
+            </div>
+        </section>
+        <section id="report" class="section section-content">
+             <div class="page-container">
+                <header class="page-header"><h2 class="page-title">Final Report</h2></header>
+                <div class="content-card"><p>Summarize your final reflections and outcomes of your training period.</p></div>
+            </div>
+        </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Daily Diary | Designed by <strong class="footer-name">Navpreet Kaur</strong></p>
+  </footer>
+
+  <!-- Inline JavaScript -->
+   <script>
+  // Week switching
+
+document.querySelectorAll('.week-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const weekId = tab.dataset.week;
+
+        // Show selected week
+        document.querySelectorAll('.week').forEach(w => w.classList.remove('active'));
+        document.getElementById(weekId).classList.add('active');
+
+        // Highlight active tab
+        document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Clear PDF viewer
+        document.getElementById('pdf-viewer').src = '';
+    });
+});
+
+// Day click handling (event delegation)
+document.querySelectorAll('.week').forEach(week => {
+    week.addEventListener('click', e => {
+        if(e.target.classList.contains('day-link')) {
+            e.preventDefault();
+            const pdfFile = e.target.dataset.pdf;
+            document.getElementById('pdf-viewer').src = `pdfs/${pdfFile}#zoom=page-width`;
+
+            // Highlight active day
+            week.querySelectorAll('.day-link').forEach(d => d.classList.remove('active-day'));
+            e.target.classList.add('active-day');
+        }
+    });
+});
+
+// Section switching
+function showSection(sectionId) {
+    const mainNav = document.getElementById('main-nav');
+
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+
+    mainNav.style.display = sectionId === 'home' ? 'none' : 'block';
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    const activeLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+    if(activeLink) activeLink.classList.add('active');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('home');
+});
+</script>
+</body>
+</html>
+
