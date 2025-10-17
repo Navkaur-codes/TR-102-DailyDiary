@@ -130,24 +130,84 @@
 
     <!-- GENERIC SECTION LAYOUT -->
     <div id="generic-sections">
-        <section id="projects" class="section section-content">
-            <div class="page-container">
-                <header class="page-header"><h2 class="page-title">Projects</h2></header>
-                <div class="content-card"><p>Add links and summaries of your completed projects here.</p></div>
-            </div>
+        <!-- PROJECTS SECTION -->
+<section id="projects" class="section section-content">
+  <div class="page-container">
+    <header class="page-header"><h2 class="page-title">💻 Projects</h2></header>
+
+    <div class="content-card">
+      <h3 class="sub-heading">InnerHarmony – Mental Health & Wellness Tracker</h3>
+      <p class="desc-text">
+        <strong>InnerHarmony</strong> is a full-stack web application built using the 
+        <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>. It helps users
+        maintain their mental well-being by providing features like <em>mood tracking, daily
+        journaling, breathing exercises, and personal progress insights</em>. The project focuses
+        on building emotional awareness and promoting self-care through a simple, elegant, and secure user experience.
+      </p>
+      <p class="desc-text">
+        The platform ensures authentication using JWT, data management via MongoDB Atlas, and a
+        responsive frontend powered by React. This project was developed as part of my 
+        4-week industrial training at <strong>Sensation Software Solutions, Mohali</strong>.
+      </p>
+      <a href="https://inner-harmony-k62w.vercel.app/" class="project-link">🌐 Visit Live Project</a>
+    </div>
+
+    <div class="content-card">
+      <h3 class="sub-heading">GitHub Repository</h3>
+      <p class="desc-text">
+        The complete source code, documentation, and setup instructions for InnerHarmony are
+        available on my GitHub repository.
+      </p>
+      <a href="https://github.com/Navkaur-codes/InnerHarmony.git" class="project-link">💾 View on GitHub</a>
+    </div>
+  </div>
+</section>
+
         </section>
-        <section id="certificates" class="section section-content">
-             <div class="page-container">
-                <header class="page-header"><h2 class="page-title">Certificates</h2></header>
-                <div class="content-card"><p>List your certificates or attach links/images here.</p></div>
-            </div>
-        </section>
-        <section id="report" class="section section-content">
-             <div class="page-container">
-                <header class="page-header"><h2 class="page-title">Final Report</h2></header>
-                <div class="content-card"><p>Summarize your final reflections and outcomes of your training period.</p></div>
-            </div>
-        </section>
+        <!-- CERTIFICATES SECTION -->
+<section id="certificates" class="section section-content">
+  <div class="page-container">
+    <header class="page-header"><h2 class="page-title">📜 Certificates</h2></header>
+
+    <div class="content-card">
+      <h3 class="sub-heading">Training Completion Certificate</h3>
+      <p class="desc-text">
+        Awarded by <strong>Sensation Software Solutions, Mohali</strong> for successfully completing a
+        4-week industrial training program in full-stack web development. It certifies my practical
+        understanding of frontend and backend integration.
+      </p>
+      <button class="pdf-open-btn" data-pdf="Training_Certificate.pdf">📄 View Certificate</button>
+    </div>
+
+    
+
+    <div class="pdf-viewer-container">
+      <iframe id="certificates-viewer" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL REPORT SECTION -->
+<section id="report" class="section section-content">
+  <div class="page-container">
+    <header class="page-header"><h2 class="page-title">🗂 Final Report</h2></header>
+
+    <div class="content-card">
+      <h3 class="sub-heading">InnerHarmony – Mental Health & Wellness Tracker</h3>
+      <p class="desc-text">
+        The final report presents a complete overview of my 4-week industrial training journey. It details
+        objectives, tools, technologies (React, Node.js, Express, MongoDB), and outcomes, along with the
+        learning experience and reflections gained during development.
+      </p>
+      <button class="pdf-open-btn" data-pdf="reportnew.pdf">📄 View Final Report</button>
+    </div>
+
+    <div class="pdf-viewer-container">
+      <iframe id="report-viewer" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>
+
     </div>
   </main>
 
@@ -174,6 +234,21 @@ document.querySelectorAll('.week-tab').forEach(tab => {
         // Clear PDF viewer
         document.getElementById('pdf-viewer').src = '';
     });
+});
+// PDF Opening for Certificates and Report
+document.querySelectorAll('.pdf-open-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pdfFile = btn.dataset.pdf;
+
+    // Determine which section the button is in
+    const parentSection = btn.closest('.section').id;
+
+    if (parentSection === 'certificates') {
+      document.getElementById('certificates-viewer').src = `pdfs/${pdfFile}#zoom=page-width`;
+    } else if (parentSection === 'report') {
+      document.getElementById('report-viewer').src = `pdfs/${pdfFile}#zoom=page-width`;
+    }
+  });
 });
 
 // Day click handling (event delegation)
